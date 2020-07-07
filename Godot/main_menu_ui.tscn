@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main_menu_ui.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 1021.0
+margin_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer"]
+margin_right = 508.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button_level1" type="Button" parent="GridContainer/VBoxContainer"]
+margin_right = 508.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Level 1"
+
+[node name="Button_level2" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 508.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "Level 2"
+
+[node name="Button_level3" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 508.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+text = "Level 3"
+
+[node name="Button_level4" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 508.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+text = "Level 4"
+
+[node name="Button_level5" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 508.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+text = "Level 5"
+
+[node name="Button_funnel" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 120.0
+margin_right = 508.0
+margin_bottom = 140.0
+size_flags_horizontal = 3
+text = "Funnel"
+
+[node name="Button_deterministic" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 508.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+text = "Deterministic"
+
+[node name="Button_exit" type="Button" parent="GridContainer/VBoxContainer"]
+margin_top = 168.0
+margin_right = 508.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+text = "Exit"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer"]
+margin_left = 512.0
+margin_right = 1020.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer2"]
+margin_right = 508.0
+margin_bottom = 14.0
+text = "Number of agents"
+
+[node name="SpinBox_number_of_agents" type="SpinBox" parent="GridContainer/VBoxContainer2"]
+margin_top = 18.0
+margin_right = 508.0
+margin_bottom = 42.0
+max_value = 5000.0
+value = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GridContainer/VBoxContainer2"]
+margin_top = 46.0
+margin_right = 508.0
+margin_bottom = 60.0
+text = "Agent Speed"
+
+[node name="SpinBox_agent_speed" type="SpinBox" parent="GridContainer/VBoxContainer2"]
+margin_top = 64.0
+margin_right = 508.0
+margin_bottom = 88.0
+max_value = 50.0
+value = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_level1" to="." method="_on_Button_level1_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_level2" to="." method="_on_Button_level2_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_level3" to="." method="_on_Button_level3_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_level4" to="." method="_on_Button_level4_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_level5" to="." method="_on_Button_level5_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_funnel" to="." method="_on_Button_funnel_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_deterministic" to="." method="_on_Button_deterministic_pressed"]
+[connection signal="pressed" from="GridContainer/VBoxContainer/Button_exit" to="." method="_on_Button_exit_pressed"]
+[connection signal="value_changed" from="GridContainer/VBoxContainer2/SpinBox_number_of_agents" to="." method="_on_SpinBox_number_of_agents_value_changed"]
+[connection signal="value_changed" from="GridContainer/VBoxContainer2/SpinBox_agent_speed" to="." method="_on_SpinBox_agent_speed_value_changed"]

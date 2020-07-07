@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/labirynt3g.obj-60e8d184a735659ef86780dad8b36bf2.mesh"
+
+[deps]
+
+files=[ "res://.import/labirynt3g.obj-60e8d184a735659ef86780dad8b36bf2.mesh" ]
+
+source_file="res://labirynt3g.obj"
+dest_files=[ "res://.import/labirynt3g.obj-60e8d184a735659ef86780dad8b36bf2.mesh", "res://.import/labirynt3g.obj-60e8d184a735659ef86780dad8b36bf2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
